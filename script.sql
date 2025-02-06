@@ -343,4 +343,17 @@ INSERT INTO tourists_tours (id_tourists, id_tours) VALUES
 (13, 11),
 (6, 8);
 
+-- 6 
+-- יצירת טבלה ב POSTGRESQL
+CREATE TABLE movies (
+    id SERIAL PRIMARY KEY  ,
+    movie_name TEXT NOT NULL UNIQUE, 
+    genre TEXT NOT NULL,
+    country TEXT NOT NULL,
+    language TEXT NOT NULL,
+    year INTEGER NOT NULL CHECK (year >= 2009),
+    revenue REAL NOT NULL CHECK (revenue >= 0) 
+);
+
+
 
